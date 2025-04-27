@@ -1,13 +1,22 @@
 const printArray = arr => {
-    // TODO HW1
+    console.log(arr.join(', '));
 }
 
 const reverseArray = arr => {
-    // TODO HW2
+    let l = -1, r = arr.length;
+    while (++l < --r) {
+        [arr[l], arr[r]] = [arr[r], arr[l]];
+    }
+    return arr;
 }
 
 const search = (arr, value) => {
-    // TODO HW3 , return index of value and -1 otherwise
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === value) {
+            return i;
+        }
+    }
+    return -1;
 }
 
 const primes = [2, 3, 5, 7, 11, 13, 17, 19];
